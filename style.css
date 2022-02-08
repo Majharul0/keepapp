@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+hr {
+  margin: 4px 0px;
+}
+.dBlock {
+  display: block;
+}
+.dNone {
+  display: none;
+  height: 130px;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #fbbc04;
+}
+.container {
+  width: 100vw;
+}
+header {
+  width: 100vw;
+  overflow: hidden;
+  height: 80px;
+  background-color: #fbbc04;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  color: white;
+  font-family: "Secular One", sans-serif;
+}
+header p i {
+  font-size: 35px;
+  padding-right: 20px;
+}
+header p {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+header #add_btn {
+  padding: 7px 14px;
+  background: unset;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  font-weight: 500;
+}
+header #add_btn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.04);
+}
+header #add_btn span:hover + i {
+  display: block;
+}
+header #add_btn > i {
+  padding-left: 10px;
+  display: none;
+}
+.body {
+  margin-top: 20px;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+.body > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.body div:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 10px 25px rgba(0, 0, 0, 0.103);
+  border: 1px solid #fbbc04;
+}
+
+.body div {
+  width: 350px;
+  margin: 0px 20px;
+  position: relative;
+  background: white;
+  border: 1px solid rgb(156, 156, 156);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.5s;
+  margin-top: 20px;
+}
+.body div textarea {
+  width: 100%;
+  height: 130px !important;
+  resize: none;
+  outline: none;
+  background: unset;
+  border: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+.body div .onlyRead {
+  width: 100%;
+  height: 130px !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.body div .edit_section {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.body div .edit_section p {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.body div .edit_section button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 11px;
+  background-color: unset;
+  margin: 0px 5px;
+}
+.body div .edit_section button:hover {
+  background-color: rgb(240, 240, 240);
+}

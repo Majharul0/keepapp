@@ -3,20 +3,23 @@ const placeItem = document.querySelector(".body");
 const epmtyC = document.getElementById("eptCheck");
 
 const updateOnLS = () =>{
+
 const allText = document.querySelectorAll("#textarea");
 const notes = [];
+
 allText.forEach((sText)=>{
 return notes.push(sText.value);
 });
 
 localStorage.setItem("notes", JSON.stringify(notes));
+
 }
 
 //adding item on body
 function addingNote(text = "") {
     const noteBox = document.createElement('div');
     const boxData = `
-        <section class="onlyRead ${text ? "":"dNone"}"  id="onlyRead" ></section>
+        <textarea readonly class="onlyRead ${text ? "":"dNone"}"  id="onlyRead" ></textarea>
         <textarea class="${text ? "dNone":""}"  id="textarea"   ></textarea>
         <hr>
         <section class="edit_section">
@@ -40,11 +43,12 @@ function addingNote(text = "") {
     //Delete Each Item by Clicking Delete Btn
     delBtn.addEventListener('click', function () {
         noteBox.remove();
+        updateOnLS()
         toggleEmpty();
     });
 
     textArea.value = text;
-    onlyRead.innerHTML = text;
+    onlyRead.textContent = text;
 
     editBtn.addEventListener('click',() =>{
         onlyRead.classList.toggle("dNone");
